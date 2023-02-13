@@ -1,0 +1,15 @@
+{
+  "name": "webworkers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webWorkers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
