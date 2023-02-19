@@ -7,16 +7,16 @@
 
 */
 
-export const FlatArray = (InputArr, Depth = Infinity, CurrentDepth = 0) => {
+export const flattenArray = (inputArr, depth = Infinity, currentDepth = 0) => {
   let flattened = [];
-  const GlobalDepth = Depth;
-  for (let i = 0; i < InputArr.length; i++) {
-    const element = InputArr[i];
+  const GlobalDepth = depth;
+  for (let i = 0; i < inputArr.length; i++) {
+    const element = inputArr.at(i);
     if (Array.isArray(element) && element.length > 0) {
-      if (GlobalDepth === CurrentDepth) {
+      if (GlobalDepth === currentDepth) {
         flattened.push(element);
       } else {
-        const Flatten = FlatArray(element, GlobalDepth, CurrentDepth + 1);
+        const Flatten = flattenArray(element, GlobalDepth, currentDepth + 1);
         flattened = flattened.concat(Flatten);
       }
     } else {
