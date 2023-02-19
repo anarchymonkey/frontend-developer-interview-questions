@@ -9,15 +9,15 @@
 
 export const flattenArray = (inputArr, depth = Infinity, currentDepth = 0) => {
   let flattened = [];
-  const GlobalDepth = depth;
+  const globalDepth = depth;
   for (let i = 0; i < inputArr.length; i++) {
     const element = inputArr.at(i);
     if (Array.isArray(element) && element.length > 0) {
-      if (GlobalDepth === currentDepth) {
+      if (globalDepth === currentDepth) {
         flattened.push(element);
       } else {
-        const Flatten = flattenArray(element, GlobalDepth, currentDepth + 1);
-        flattened = flattened.concat(Flatten);
+        const flatten = flattenArray(element, globalDepth, currentDepth + 1);
+        flattened = flattened.concat(flatten);
       }
     } else {
       flattened.push(element);
