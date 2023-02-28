@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "start": "parcel ./webworkers/index.html --no-cache"
+    "start": "parcel ./webworkers/index.html --no-cache",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
