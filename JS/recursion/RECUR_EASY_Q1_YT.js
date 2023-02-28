@@ -6,7 +6,7 @@
     (string | number)
 */
 
-import { isElementAnObject, objectKeys } from "../utils";
+import { isElementAnObject, objectKeys } from "../utils.js";
 
 const input = {
     one: {

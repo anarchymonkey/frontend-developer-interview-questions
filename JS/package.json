@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "A series o JS interview questions",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel ./webworkers/index.html --no-cache"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,8 @@
   },
   "homepage": "https://github.com/anarchymonkey/interview-questions-SWE#readme",
   "dependencies": {
-    "jest": "^29.4.2"
+    "jest": "^29.4.2",
+    "parcel": "^2.8.3"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
