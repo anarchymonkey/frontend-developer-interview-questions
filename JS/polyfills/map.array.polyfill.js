@@ -20,7 +20,7 @@ Array.prototype.customMap = function (callbackFn) {
     let newArray = [];
 
     for (let i = 0; i < this.length; i++) {
-        newArray.push(callbackFn(this[i]));
+        newArray.push(callbackFn(this[i], i, this));
     }
 
     return newArray;
