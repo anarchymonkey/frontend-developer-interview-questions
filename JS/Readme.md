@@ -6,6 +6,93 @@ This repository contains a list of theoretical questions related to JavaScript b
 
 Feel free to use this repository as a resource to prepare for your next front end interview. Good luck!
 
+## Contents
+
+- [🚀 Front End Interview Questions - JavaScript Basics](#-front-end-interview-questions---javascript-basics)
+  - [Contents](#contents)
+- [Basics](#basics)
+    - [What is JavaScript?](#what-is-javascript)
+    - [What are the data types in JavaScript?](#what-are-the-data-types-in-javascript)
+    - [What is the difference between undefined and null?](#what-is-the-difference-between-undefined-and-null)
+    - [What is the difference between == and ===?](#what-is-the-difference-between--and-)
+    - [What is the difference between var, let, and const?](#what-is-the-difference-between-var-let-and-const)
+    - [What is hoisting in JavaScript?](#what-is-hoisting-in-javascript)
+    - [What is the this keyword in JavaScript?](#what-is-the-this-keyword-in-javascript)
+    - [What is event bubbling in JavaScript?](#what-is-event-bubbling-in-javascript)
+    - [What is a closure in JavaScript?](#what-is-a-closure-in-javascript)
+- [Functions](#functions)
+    - [What is a higher-order function in JavaScript?](#what-is-a-higher-order-function-in-javascript)
+    - [What is a callback function in JavaScript?](#what-is-a-callback-function-in-javascript)
+    - [What is a pure function in JavaScript?](#what-is-a-pure-function-in-javascript)
+    - [What is the difference between function declaration and function expression?](#what-is-the-difference-between-function-declaration-and-function-expression)
+    - [What is a recursive function in JavaScript?](#what-is-a-recursive-function-in-javascript)
+    - [What is a generator function in JavaScript?](#what-is-a-generator-function-in-javascript)
+    - [What is the difference between .call() and .apply()?](#what-is-the-difference-between-call-and-apply)
+    - [What is the difference between .bind() and .call()?](#what-is-the-difference-between-bind-and-call)
+    - [What is the arguments object in JavaScript?](#what-is-the-arguments-object-in-javascript)
+    - [What is a rest parameter in JavaScript?](#what-is-a-rest-parameter-in-javascript)
+- [Objects](#objects)
+    - [What is an object in JavaScript?](#what-is-an-object-in-javascript)
+    - [What is the difference between an object and an array in JavaScript?](#what-is-the-difference-between-an-object-and-an-array-in-javascript)
+    - [What is prototypal inheritance in JavaScript?](#what-is-prototypal-inheritance-in-javascript)
+    - [What is the Object.create() method in JavaScript?](#what-is-the-objectcreate-method-in-javascript)
+    - [What is the new keyword in JavaScript?](#what-is-the-new-keyword-in-javascript)
+    - [What is a constructor function in JavaScript?](#what-is-a-constructor-function-in-javascript)
+- [Arrays](#arrays)
+    - [What is an array in JavaScript?](#what-is-an-array-in-javascript)
+    - [What is the difference between .forEach() and .map()?](#what-is-the-difference-between-foreach-and-map)
+    - [What is the difference between .slice() and .splice()?](#what-is-the-difference-between-slice-and-splice)
+    - [What is the difference between .shift() and .pop()?](#what-is-the-difference-between-shift-and-pop)
+    - [What is the Array.prototype.filter() method in JavaScript?](#what-is-the-arrayprototypefilter-method-in-javascript)
+    - [What is the Array.prototype.reduce() method in JavaScript?](#what-is-the-arrayprototypereduce-method-in-javascript)
+- [ES6 Features](#es6-features)
+    - [What are template literals in JavaScript?](#what-are-template-literals-in-javascript)
+    - [What are default parameters in JavaScript?](#what-are-default-parameters-in-javascript)
+    - [What are destructuring assignments in JavaScript?](#what-are-destructuring-assignments-in-javascript)
+    - [What is the spread operator in JavaScript?](#what-is-the-spread-operator-in-javascript)
+    - [What is the class keyword in JavaScript?](#what-is-the-class-keyword-in-javascript)
+    - [What is the super keyword in JavaScript?](#what-is-the-super-keyword-in-javascript)
+    - [What is the Symbol data type in JavaScript?](#what-is-the-symbol-data-type-in-javascript)
+- [Promises](#promises)
+    - [What are promises in JavaScript?](#what-are-promises-in-javascript)
+    - [What is the difference between a promise and a callback?](#what-is-the-difference-between-a-promise-and-a-callback)
+    - [What is the .then() method in promises?](#what-is-the-then-method-in-promises)
+    - [What is the .catch() method in promises?](#what-is-the-catch-method-in-promises)
+    - [What is the .finally() method in promises?](#what-is-the-finally-method-in-promises)
+    - [What is the Promise.all() method in JavaScript?](#what-is-the-promiseall-method-in-javascript)
+    - [What is the Promise.race() method in JavaScript?](#what-is-the-promiserace-method-in-javascript)
+    - [What is the Promise.allSettled() method in Javascript?](#what-is-the-promiseallsettled-method-in-javascript)
+    - [What is the async keyword in JavaScript?](#what-is-the-async-keyword-in-javascript)
+    - [What is the await keyword in JavaScript?](#what-is-the-await-keyword-in-javascript)
+    - [What is the difference between async/await and promises?](#what-is-the-difference-between-asyncawait-and-promises)
+    - [How do you handle errors in async/await?](#how-do-you-handle-errors-in-asyncawait)
+    - [What is the try/catch block in JavaScript?](#what-is-the-trycatch-block-in-javascript)
+    - [How do you use async/await with Promise.all()?](#how-do-you-use-asyncawait-with-promiseall)
+- [DOM (Document Object Model) Manupulation](#dom-document-object-model-manupulation)
+    - [What is the Document Object Model (DOM) in JavaScript?](#what-is-the-document-object-model-dom-in-javascript)
+    - [What is the difference between innerHTML and textContent?](#what-is-the-difference-between-innerhtml-and-textcontent)
+    - [What is the querySelector() method in JavaScript?](#what-is-the-queryselector-method-in-javascript)
+    - [What is the addEventListener() method in JavaScript?](#what-is-the-addeventlistener-method-in-javascript)
+    - [What is event delegation in JavaScript?](#what-is-event-delegation-in-javascript)
+- [Browser APIs](#browser-apis)
+    - [What are browser APIs in JavaScript?](#what-are-browser-apis-in-javascript)
+    - [What is the localStorage API in JavaScript?](#what-is-the-localstorage-api-in-javascript)
+    - [What is the sessionStorage API in JavaScript?](#what-is-the-sessionstorage-api-in-javascript)
+    - [What is the window object in JavaScript?](#what-is-the-window-object-in-javascript)
+    - [What is the setTimeout() method in JavaScript?](#what-is-the-settimeout-method-in-javascript)
+- [Performance \& Event Loop:](#performance--event-loop)
+    - [What is event loop in JavaScript?](#what-is-event-loop-in-javascript)
+    - [What is the requestAnimationFrame() method in JavaScript?](#what-is-the-requestanimationframe-method-in-javascript)
+    - [What is memoization in JavaScript?](#what-is-memoization-in-javascript)
+    - [What is lazy loading in JavaScript?](#what-is-lazy-loading-in-javascript)
+    - [What is tree shaking in JavaScript?](#what-is-tree-shaking-in-javascript)
+- [Security](#security)
+    - [What is Cross-Site Scripting (XSS) in JavaScript?](#what-is-cross-site-scripting-xss-in-javascript)
+    - [What is Cross-Site Request Forgery (CSRF) in JavaScript?](#what-is-cross-site-request-forgery-csrf-in-javascript)
+    - [What is the Same-Origin Policy in JavaScript?](#what-is-the-same-origin-policy-in-javascript)
+    - [What is Content Security Policy (CSP) in JavaScript?](#what-is-content-security-policy-csp-in-javascript)
+    - [What is the difference between encryption and hashing in JavaScript?](#what-is-the-difference-between-encryption-and-hashing-in-javascript)
+
 # Basics
 
 ### What is JavaScript?
@@ -1125,7 +1212,7 @@ Here's a flowchart that shows how event delegation works:
         End
 ```
 
-### In summary, the Document Object Model (DOM) is a programming interface for web documents that can be modified with JavaScript. innerHTML and textContent are properties of DOM elements that allow you to modify their content. querySelector() allows you to select elements using CSS selectors, and addEventListener() allows you to attach event handlers to elements. Event delegation is a technique that can improve performance and simplify code by attaching a single event listener to a parent element instead of many child elements.
+ In summary, the Document Object Model (DOM) is a programming interface for web documents that can be modified with JavaScript. innerHTML and textContent are properties of DOM elements that allow you to modify their content. querySelector() allows you to select elements using CSS selectors, and addEventListener() allows you to attach event handlers to elements. Event delegation is a technique that can improve performance and simplify code by attaching a single event listener to a parent element instead of many child elements.
 
 # Browser APIs
 
@@ -1232,8 +1319,7 @@ Here's a flowchart that shows how to use setTimeout():
         End
 
 ```
-
-### In summary, browser APIs in JavaScript provide a way to interact with the browser and perform tasks such as modifying the DOM, making HTTP requests, and storing data locally. The localStorage and sessionStorage APIs allow you to store data locally in the user's browser, the window object provides access to browser APIs and global functions and properties, and setTimeout() allows you to schedule a function to be executed after a delay.
+ In summary, browser APIs in JavaScript provide a way to interact with the browser and perform tasks such as modifying the DOM, making HTTP requests, and storing data locally. The localStorage and sessionStorage APIs allow you to store data locally in the user's browser, the window object provides access to browser APIs and global functions and properties, and setTimeout() allows you to schedule a function to be executed after a delay.
 
 
 # Performance & Event Loop:
