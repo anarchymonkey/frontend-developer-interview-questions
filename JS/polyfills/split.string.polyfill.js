@@ -1,14 +1,21 @@
 // Create a custom split string prototype
 
-String.prototype.split = function (splitter) {
-    const targetString = this;
-
-    if (typeof splitter != 'string') {
-        throw TypeError("The splitter must be a string")
+String.prototype.split = function customSplit(str, separator, limit) {
+    if (!(separator instanceof RegExp)) {
+      return str.split(separator, limit);
     }
-
-    if (splitter === '') {
-        return targetString;
+  
+    const result = [];
+    let match, lastIndex = 0;
+  
+    while ((match = separator.exec(str)) !== null) {
+      result.push(str.slice(lastIndex, match.index), ...match.slice(1));
+      lastIndex = match.index + match[0].length;
+  
+      if (limit && result.length / 2 >= limit) break;
     }
-    
-}
+  
+    result.push(str.slice(lastIndex));
+  
+    return result;
+  }
